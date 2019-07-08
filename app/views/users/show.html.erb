@@ -3,3 +3,5 @@
 <% @user.posts.each do |post| %>
   <%= link_to post.title, post_path(post) %>
 <% end %>
+
+Iterate over associations in a view and display associated data for a primary instance.

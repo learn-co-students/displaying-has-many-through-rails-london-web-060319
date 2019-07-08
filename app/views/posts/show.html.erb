@@ -7,3 +7,25 @@ Comments:
     <%= link_to comment.user.username, user_path(comment.user) %> said
     <%= comment.content %>
   <% end %>
+
+
+Post#show page to display all of the comments on a particular post.
+
+@post.comments.each do |comment|
+comment.content
+
+Include the username of the user who created the comment
+comment.user.username
+
+ and a link to their show page.
+ user_path(comment.user)
+
+post has many comments,
+has many users, through comments
+
+comments - content, user id, post id,
+posts - title and content
+users - username and email
+
+To get the username of the user who created the comment,
+comment.user.username
